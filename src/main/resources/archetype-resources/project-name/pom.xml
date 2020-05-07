@@ -8,7 +8,7 @@
     <version>${version}</version>
   </parent>
 
-  <artifactId>${artifactId}</artifactId>
+  <artifactId>${project-name}</artifactId>
   <packaging>war</packaging>
 
   <name>${artifactId}</name>
@@ -50,16 +50,7 @@
 
   <build>
     <plugins>
-      <plugin>
-        <artifactId>maven-ejb-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
+
     </plugins>
   </build>
 </project>

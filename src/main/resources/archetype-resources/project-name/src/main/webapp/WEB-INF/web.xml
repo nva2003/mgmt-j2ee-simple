@@ -9,7 +9,7 @@
 
 
     <context-param>
-        <description>version of ${artifactId}</description>
+        <description>version of ${project-name}</description>
         <param-name>version</param-name>
         <param-value>1.0</param-value>
     </context-param>

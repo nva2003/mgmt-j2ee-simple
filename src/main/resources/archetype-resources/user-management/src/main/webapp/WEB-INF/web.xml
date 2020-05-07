@@ -32,11 +32,11 @@
 
     <context-param>
         <param-name>webAppRootKey</param-name>
-        <param-value>${artifactId}</param-value>
+        <param-value>user-management</param-value>
     </context-param>
 
     <context-param>
-        <description>version of ${artifactId}</description>
+        <description>version of user-management</description>
         <param-name>version</param-name>
         <param-value>1.0</param-value>
     </context-param>

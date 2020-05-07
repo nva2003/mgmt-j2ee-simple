@@ -9,10 +9,10 @@
 <!--    <relativePath>../pom.xml</relativePath>-->
   </parent>
 
-  <artifactId>${artifactId}</artifactId>
+  <artifactId>user-management</artifactId>
   <packaging>war</packaging>
 
-  <name>${artifactId}</name>
+  <name>user-management</name>
 
   <repositories>
     <repository>

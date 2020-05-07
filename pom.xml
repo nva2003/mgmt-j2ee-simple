@@ -27,4 +27,18 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>nexus-repo</id>
+      <url>http://10.240.2.45:9999/nexus/content/repositories/userManagment</url>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>nexus-repo</id>
+      <name>Snapshots</name>
+      <url>http://10.240.2.45:9999/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+
+  </distributionManagement>
 </project>
