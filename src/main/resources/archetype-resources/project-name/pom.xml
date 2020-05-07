@@ -11,7 +11,7 @@
   <artifactId>${project-name}</artifactId>
   <packaging>war</packaging>
 
-  <name>${artifactId}</name>
+  <name>${project-name}</name>
 
   <repositories>
     <repository>
