@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>pom</packaging>
+
+
+  <name>${artifactId}</name>
+
+  <repositories>
+    <repository>
+      <id>um-repo</id>
+      <name>userManagment repo</name>
+      <url>http://10.240.2.45:9999/nexus/content/repositories/userManagment</url>
+    </repository>
+  </repositories>
+
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <outDir>C:\MyProjects\Applications</outDir>
+
+    <javax.mail>1.6.2</javax.mail>
+    <user-management.version>2.0</user-management.version>
+    <shiro.version>1.4.0</shiro.version>
+<!--    <user-managment-ws-client.version>1.2</user-managment-ws-client.version>-->
+    <user-managment-shiro-web.version>1.0</user-managment-shiro-web.version>
+    <user-managment-shiro-web-templates.version>1.0</user-managment-shiro-web-templates.version>
+
+
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <dependency>
+        <groupId>rzd.pktbcki</groupId>
+        <artifactId>auditsystem-user-management</artifactId>
+        <version>${user-management.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>rzd.pktbcki</groupId>
+        <artifactId>user-managment-shiro-web</artifactId>
+        <version>${user-managment-shiro-web.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>rzd.pktbcki</groupId>
+        <artifactId>user-managment-shiro-web-templates</artifactId>
+        <version>${user-managment-shiro-web-templates.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.mail</groupId>
+        <artifactId>javax.mail</artifactId>
+        <version>${javax.mail}</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>rzd.pktbcdt.maven.archetypes</groupId>
+        <artifactId>user-management</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>rzd.pktbcdt.maven.archetypes</groupId>
+        <artifactId>project-name</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <type>war</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-ear-plugin</artifactId>
+          <configuration>
+            <modules />
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-ejb-plugin</artifactId>
+          <version>3.0.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
