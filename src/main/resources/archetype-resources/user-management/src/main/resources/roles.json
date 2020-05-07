@@ -1,0 +1,19 @@
+{
+    "roles" :
+        [
+
+             {
+                "roleName" : "NPP.DOR.92",
+                "description": "Дорога (92)"
+            },
+            {
+                "roleName" : "NPP.DOR.94",
+                "description": "Дорога (94)"
+            },
+            {
+                "roleName" : "NPP.DOR.96",
+                "description": "Дорога (96)"
+            }
+
+        ]
+}

@@ -15,12 +15,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>rzd.pktbcdt.maven.archetypes</groupId>
-      <artifactId>project-name</artifactId>
+      <groupId>${groupId}</groupId>
+      <artifactId>${project-name}</artifactId>
       <type>war</type>
     </dependency>
     <dependency>
-      <groupId>rzd.pktbcdt.maven.archetypes</groupId>
+      <groupId>${groupId}</groupId>
       <artifactId>user-management</artifactId>
       <type>war</type>
     </dependency>

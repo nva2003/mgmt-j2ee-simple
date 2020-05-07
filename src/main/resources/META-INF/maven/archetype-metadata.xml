@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="mgmt-j2ee-simple"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <requiredProperties>
+    <requiredProperty key="groupId">
+      <defaultValue>rzd.pktbctt</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="version">
+      <defaultValue>1.0-SNAPSHOT</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="project-name">
+      <defaultValue>project-name</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="audit_id">
+      <defaultValue>-1</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="system_id">
+      <defaultValue>-1</defaultValue>
+    </requiredProperty>
+
+  </requiredProperties>
+  <fileSets>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.gitignore</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <modules>
+    <module id="user-management" dir="user-management" name="user-management">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.properties</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.json</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="project-name" dir="project-name" name="project-name">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.ini</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="ear" dir="ear" name="ear" />
+  </modules>
+</archetype-descriptor>
