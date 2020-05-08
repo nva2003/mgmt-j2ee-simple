@@ -5,7 +5,7 @@
 
   <requiredProperties>
     <requiredProperty key="groupId">
-      <defaultValue>rzd.pktbctt</defaultValue>
+      <defaultValue>rzd.pktbcdt</defaultValue>
     </requiredProperty>
     <requiredProperty key="version">
       <defaultValue>1.0-SNAPSHOT</defaultValue>
